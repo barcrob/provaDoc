@@ -6,7 +6,7 @@ La sintassi di questo file json prevede due nodi:
 
 il nodo *skipCheck* è di tipo booleano ed indica se inibire tutto il processo di validazione temporale dei certificati. il valore di default è false, pertanto se non presente l'utility effettuerà il controllo di validità. 
 
-il nodo *whiteList* contiene un array di nomi di certificati (estensione inclusa) che non devono essere sottoposti al controllo di validità da parte dell'utiily.
+il nodo *whiteList* contiene un array di nomi di certificati (estensione inclusa) che non devono essere sottoposti al controllo di validità da parte dell'utility.
 
 Un esempio di contenuto del file di configurazione è il seguente:
 
