@@ -1,12 +1,18 @@
-# Sintassi del json
-Questo file json contiene la lista dei certificati da escludere dalla valutazione da parte dell'utility. La sintassi di questo file prevede la presenza di un nodo mandatorio:
+# Sintassi del file di configurazione
+La sintassi di questo file json prevede due nodi:
 
- - *whiteList* 
+- *skipCheck* : opzionale
+- *whiteList* : mandatorio
 
-che contiene un array. Ogni elemento dell'array è il nome del certificato da skippare, comprensivo dell'estensione (.cer o .der). Es:
+il nodo *skipCheck* è di tipo booleano ed indica se inibire tutto il processo di validazione temporale dei certificati. il valore di default è false, pertanto se non presente l'utility effettuerà il controllo di validità. 
+
+il nodo *whiteList* contiene un array di nomi di certificati (estensione inclusa) che non devono essere sottoposti al controllo di validità da parte dell'utiily.
+
+Un esempio di contenuto del file di configurazione è il seguente:
 
 
     {
+       "skipCheck":false,
        "whiteList":[
           "idpInt.cer",
           "idpLeaf.cer",
